@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Text bearbeiten</title>
+
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+ s 
+<body>
+
+    <h2>Meine eigenen Aufgaben</h2>
+
+    <textarea id="eingabe" placeholder="Text eingeben"></textarea>
+    <br><br>
+
+    <input type="text" id="neuText" placeholder="Neuen Text eingeben">
+    <br><br>
+
+    <button onclick="textLoeschen()">Text löschen</button>
+    <button onclick="textKopieren()">Text kopieren</button>
+    <button onclick="wortErsetzen()">Wort ersetzen</button>
+    <button onclick="textLaenge()">Textlänge anzeigen</button>
+    <button onclick="leerzeichenEntfernen()">Leerzeichen entfernen</button>
+
+    <p id="ausgabe"></p>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>
