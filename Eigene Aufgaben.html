@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Text bearbeiten</title>
-
+    <link rel="stylesheet" href="style.css">
     <style>
         textarea {
             resize: none;
         }
     </style>
 </head>
- s 
+
 <body>
 
-    <h2>Meine eigenen Aufgaben</h2>
+    <h2>Meine eigene Aufgabe</h2>
 
     <textarea id="eingabe" placeholder="Text eingeben"></textarea>
     <br><br>
@@ -30,7 +30,36 @@
 
     <p id="ausgabe"></p>
 
+
     <script>
+        // Hole große Textfeld
+        let eingabe = document.getElementById("eingabe");
+
+        // Hole kleine Textfeld
+        let neuText = document.getElementById("neuText");
+
+        // Hole Feld für  Ausgabe
+        let ausgabe = document.getElementById("ausgabe");
+
+        // ganzer text löschen
+        function textLoeschen() {
+            eingabe.value = "";
+            ausgabe.innerHTML = "Der Text wurde gelöscht";
+        }
+        // Diese Funktion kopiert den Text
+        function textKopieren() {
+            navigator.clipboard.writeText(eingabe.value);
+            ausgabe.innerHTML = "Der Text wurde kopiert";
+        }
+
+        // Diese Funktion ersetzt den ganzen Text oben
+        function wortErsetzen() {
+            eingabe.value = neuText.value;
+            ausgabe.innerHTML = "Der Text oben wurde ersetzt";
+        }
+
+
+
 
     </script>
 
