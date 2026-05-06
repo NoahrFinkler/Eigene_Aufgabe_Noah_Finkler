@@ -57,6 +57,23 @@
             eingabe.value = neuText.value;
             ausgabe.innerHTML = "Der Text oben wurde ersetzt";
         }
+        
+        // Diese Funktion zeigt die Länge vom Text
+        function textLaenge() {
+            let text = eingabe.value;
+            ausgabe.innerHTML = "Der Text hat " + text.length + " Zeichen";
+        }
+
+        // Diese Funktion entfernt alle Leerzeichen
+        function leerzeichenEntfernen() {
+            let text = eingabe.value;
+            let textArray = text.split(" ");
+            let neuerText = textArray.concat().join("");
+
+            eingabe.value = neuerText;
+            ausgabe.innerHTML = "Alle Leerzeichen wurden entfernt";
+        }
+
 
 
 
